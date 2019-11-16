@@ -1,0 +1,75 @@
+
+ if (n_word.equals(y[j]))
+	    		 {
+	    			 System.out.println(y[j-1]);
+	    			 noun_count+=1;
+	    			  
+	    		 }
+ else if(np_word.equals(y[j]))
+	    		 {
+	    			 
+	    			 System.out.println(y[j-1]);
+	    			 noun_count+=1; 
+	    		 }
+	    		 else if(ns_word.equals(y[j]))
+	    		 {
+	    			 
+	    			 System.out.println(y[j-1]);
+	    			 noun_count+=1; 
+	    		 }
+	    		 else if(nps_word.equals(y[j]))
+	    		 {
+	    			 
+	    			 System.out.println(y[j-1]);
+	    			 noun_count+=1; 
+	    		 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	static int count(String tagged, String n_word, String np_word,String ns_word,String nps_word)  
+	{ 
+	    // split the string by spaces in a 
+	    String x[] = tagged.split(" "); 
+	  
+	    // search for pattern in tagged 
+	    int count = 0;
+	    int noun_count = 0;
+	    for (int i = 0; i < x.length; i++)  
+	    { 
+	    	String y[] = x[i].split("_");
+	    	
+	    	for(int j=0; j < y.length; j++)
+	    	{
+	    		 if (n_word.equals(y[j]))
+	    		 {
+	    			 System.out.println(y[j-1]);
+	    			 noun_count+=1;
+	    			  
+	    		 }
+	    		 
+	    	}
+	    	
+	           // if match found increase count 
+	          // if (word.equals(x[i])) 
+	          count++; 
+	    	
+	    } 
+	  System.out.print("Number of nouns available are :      ");
+	   System.out.println(noun_count);
+	    System.out.print("Total number of words inserted :    ");
+	    return count ;
+	}  
+	
